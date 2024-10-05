@@ -54,4 +54,20 @@ app.get('/', (req, res) => {
   res.render('home.ejs', { RESTAURANT })
 });
 
+// Get Menu route
+app.get('/menu', (req, res) => {
+  const menu = RESTAURANT.menu; // Assuming RESTAURANT is defined elsewhere
+  res.render('menu.ejs', { menu });
+});
+// Get /menu/:category
+app.get('/menu/:category', (req, res) => {
+  const category = req.params.category;  // Get category from URL
+  const menuItems = RESTAURANT.menu.filter(item => item.category === category);  // Filter menu items by category
+
+  res.render('category.ejs', { menuItems, category });
+});
+
+
+
+
 app.listen(3000);

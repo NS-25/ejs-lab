@@ -5,34 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    <%= RESTAURANT.name %>
+    <%= RESTAURANT.name %>.
   </title>
 </head>
-
 <body>
-  <h1>Home Page</h1>
+<%- include('../partials/nav') %>
+
+    <h1>
+      <%= RESTAURANT.name %>.
+    </h1>
+    <h2>Welcome to <%= RESTAURANT.name %>. </h2>
+    <p>
+      Address: <%= RESTAURANT.address %>.
+        <br>
+        Contacts: <%= RESTAURANT.phone %>
+    </p>
 </body>
-<!-- 2. -->
-<p>
-  <%= RESTAURANT.name %>
-</p>
-<p>
-  <%= RESTAURANT.address %>
-</p>
-<p>
-  <%= RESTAURANT.phone %>
-</p>
-<!-- 4. condition-->
-<% if(true) { %>
-  <p>Yes we are open!</p>
-  <% } else { %>
-    <p>Sorry,we are closed.</p>
-    <% } %>
-      <!-- ///// Exercise-2 -->
-
-
-
-
-      </body>
 
 </html>
